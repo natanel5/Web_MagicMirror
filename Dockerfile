@@ -4,12 +4,9 @@ FROM nginx:alpine
 # Remove default Nginx content
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy our separated app files to the Nginx directory
-COPY app/index.html /usr/share/nginx/html/index.html
-COPY app/style.css /usr/share/nginx/html/style.css
-COPY app/main.js /usr/share/nginx/html/main.js
-COPY app/modules/ /usr/share/nginx/html/modules/
-COPY config.json /usr/share/nginx/html/config.json
+# Copy the entire app directory (html, css, js, modules)
+# This is cleaner than copying file by file
+COPY app/ /usr/share/nginx/html/
 
 # Expose port 80
 EXPOSE 80

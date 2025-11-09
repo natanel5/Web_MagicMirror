@@ -1,4 +1,4 @@
-// after edits "mv app/templates/config.json.template app/config.json"
+// before edits "cp templates/config.json.template config.json", work on the new file and delete all comments
 {
   "weather": {
     "apiKey": "your_real_api_key_goes_here",
