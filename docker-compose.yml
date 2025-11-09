@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mirror-app:
+    # Build the image from the Dockerfile
+    build: .
+    image: my-mirror-app:latest
+    
+    # Forward port 8080 to port 80
+    ports:
+      - "8080:80"
+    
+    # --- This is the new magic part ---
+    # Mounts the host config.json file directly into the container's web directory
+    # This makes the config readable by the script.js fetch()
+    volumes:
+      - ./config.json:/usr/share/nginx/html/config.json:ro
+      # :ro means "read-only", a good practice so the container can't change the config

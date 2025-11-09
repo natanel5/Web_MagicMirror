@@ -1,0 +1,65 @@
+/* General Setup */
+body {
+    background-color: #121212; /* Very dark gray, not pure black */
+    color: #eeeeee; /* Light gray text */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* The Grid System for modularity */
+.grid-container {
+    display: grid;
+    /* This creates responsive columns: 
+       it tries to fit columns of 300px, 
+       but will stretch them if there's space. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between widgets */
+}
+
+/* The Widget "Card" Style */
+.widget {
+    background-color: rgba(255, 255, 255, 0.05); /* Transparent white */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Specific Widget Styles */
+#clock {
+    /* The main widget card is now just a container */
+    text-align: center;
+}
+
+#clock-time {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 2px; /* Adds a bit of spacing */
+}
+
+#clock-date {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 5px;
+    opacity: 0.8; /* Makes it a bit softer than the time */
+}
+
+#greeting {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+#weather {
+    font-size: 1.2rem;
+}
+
+#weather h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#weather p {
+    margin: 5px 0;
+}

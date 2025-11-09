@@ -1,1 +1,5 @@
-
+# Ignore environment files
+.env
+config.json
+# Ignore build artifacts
+node_modules/

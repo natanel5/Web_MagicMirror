@@ -1,0 +1,8 @@
+// after edits "mv app/templates/config.json.template app/config.json"
+{
+  "weather": {
+    "apiKey": "your_real_api_key_goes_here",
+    "lat": "32.0853", // Example: Tel Aviv lattitude
+    "lon": "34.7818" // Example: Tel Aviv longitude
+  }
+}
