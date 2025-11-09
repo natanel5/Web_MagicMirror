@@ -9,6 +9,7 @@ COPY app/index.html /usr/share/nginx/html/index.html
 COPY app/style.css /usr/share/nginx/html/style.css
 COPY app/main.js /usr/share/nginx/html/main.js
 COPY app/modules/ /usr/share/nginx/html/modules/
+COPY config.json /usr/share/nginx/html/config.json
 
 # Expose port 80
 EXPOSE 80
